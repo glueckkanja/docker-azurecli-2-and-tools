@@ -1,7 +1,7 @@
 FROM azuresdk/azure-cli-python
 
 # samba
-RUN apk update && apk add cifs-utils
+RUN apk update && apk add cifs-utils rsync zip jq less
 
 # git lfs
 RUN apk --no-cache add openssl git curl \
