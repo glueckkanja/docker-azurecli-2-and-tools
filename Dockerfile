@@ -1,9 +1,9 @@
 FROM azuresdk/azure-cli-python
 
-
+# samba
 RUN apk update && apk add cifs-utils
 
-
+# git lfs
 RUN apk --no-cache add openssl git curl \
   && curl -sLO https://github.com/git-lfs/git-lfs/releases/download/v2.3.0/git-lfs-linux-amd64-2.3.0.tar.gz \
   && tar zxvf git-lfs-linux-amd64-2.3.0.tar.gz \
